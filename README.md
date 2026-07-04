@@ -28,3 +28,12 @@ This project predicts house prices based on features like area, bedrooms, bathro
 
 ## Status
 Currently building the first version of the project.
+## Results
+- Model Used: Linear Regression
+- Evaluation Metrics:
+  - MAE: 970043.40
+  - MSE: 1754318687330.66
+  - R2 Score: 0.65
+
+## Sample Output
+The model predicts house prices based on features such as area, bedrooms, bathrooms, stories, and parking.
