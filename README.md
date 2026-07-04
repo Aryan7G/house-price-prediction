@@ -1,39 +1,89 @@
 # House Price Prediction
 
-My first machine learning project for predicting house prices using Python and scikit-learn.
+A machine learning project to predict house prices using housing features such as area, number of bedrooms, bathrooms, stories, parking, and furnishing status.  
+Built with **Python, Pandas, NumPy, Matplotlib, and Scikit-learn**.
 
-## Project Goal
-This project predicts house prices based on features like area, bedrooms, bathrooms, stories, parking, and furnishing status.
+---
+
+## Project Overview
+
+This project uses a **Linear Regression** model to predict house prices from a housing dataset.  
+The goal of this project was to understand the complete beginner ML workflow:
+
+- loading and exploring a dataset
+- preprocessing categorical features
+- splitting data into train and test sets
+- training a regression model
+- evaluating model performance with metrics
+
+---
+
+## Dataset Features
+
+The dataset includes features such as:
+
+- area
+- bedrooms
+- bathrooms
+- stories
+- main road access
+- guest room
+- basement
+- hot water heating
+- air conditioning
+- parking
+- preferred area
+- furnishing status
+
+**Target variable:** `price`
+
+---
 
 ## Tech Stack
+
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Scikit-learn
+- Google Colab / Jupyter Notebook
 
-## Project Structure
-- `data/` → dataset files
-- `notebooks/` → Jupyter/Colab notebook
-- `requirements.txt` → required libraries
+---
 
 ## Workflow
-1. Load the dataset
-2. Clean and preprocess the data
-3. Convert categorical columns to numeric
-4. Split data into train/test sets
-5. Train a Linear Regression model
-6. Evaluate the model
-7. Make predictions
 
-## Status
-Currently building the first version of the project.
-## Results
-- Model Used: Linear Regression
-- Evaluation Metrics:
-  - MAE: 970043.40
-  - MSE: 1754318687330.66
-  - R2 Score: 0.65
+1. Loaded the housing dataset
+2. Explored the dataset using `head()`, `shape`, and basic inspection
+3. Converted categorical columns using `pd.get_dummies()`
+4. Split the data into features (`X`) and target (`y`)
+5. Performed train-test split
+6. Trained a **Linear Regression** model
+7. Predicted house prices on test data
+8. Evaluated the model using:
+   - MAE
+   - MSE
+   - R² Score
 
-## Sample Output
-The model predicts house prices based on features such as area, bedrooms, bathrooms, stories, and parking.
+---
+
+## Model Performance
+
+Results from the current model:
+
+- **MAE:** 970043.40
+- **MSE:** 1754318687330.66
+- **R² Score:** 0.6529
+
+---
+
+## Project Structure
+
+```bash
+house-price-prediction/
+├── data/
+│   └── Housing.csv
+├── notebooks/
+│   └── house_price_prediction.ipynb
+├── requirements.txt
+├── README.md
+└── .gitignore
