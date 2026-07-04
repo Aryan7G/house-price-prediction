@@ -1,89 +1,150 @@
 # House Price Prediction
 
-A machine learning project to predict house prices using housing features such as area, number of bedrooms, bathrooms, stories, parking, and furnishing status.  
-Built with **Python, Pandas, NumPy, Matplotlib, and Scikit-learn**.
+My first machine learning project for predicting house prices using Python and scikit-learn.
 
----
-
-## Project Overview
-
-This project uses a **Linear Regression** model to predict house prices from a housing dataset.  
-The goal of this project was to understand the complete beginner ML workflow:
-
-- loading and exploring a dataset
-- preprocessing categorical features
-- splitting data into train and test sets
-- training a regression model
-- evaluating model performance with metrics
-
----
-
-## Dataset Features
-
-The dataset includes features such as:
-
+## Project Goal
+This project predicts house prices based on features like:
 - area
 - bedrooms
 - bathrooms
 - stories
-- main road access
-- guest room
-- basement
-- hot water heating
-- air conditioning
 - parking
-- preferred area
 - furnishing status
+- and other house-related features
 
-**Target variable:** `price`
+The model is trained using **Linear Regression**.
+
+---
+
+## Project Structure
+
+house-price-prediction/
+│
+├── data/
+│   └── Housing.csv
+│
+├── notebooks/
+│   └── house_price_prediction.ipynb
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 
 ---
 
 ## Tech Stack
-
 - Python
 - Pandas
 - NumPy
-- Matplotlib
 - Scikit-learn
-- Google Colab / Jupyter Notebook
+- Matplotlib
+- Jupyter Notebook / Google Colab
 
 ---
 
-## Workflow
-
-1. Loaded the housing dataset
-2. Explored the dataset using `head()`, `shape`, and basic inspection
-3. Converted categorical columns using `pd.get_dummies()`
-4. Split the data into features (`X`) and target (`y`)
-5. Performed train-test split
-6. Trained a **Linear Regression** model
-7. Predicted house prices on test data
-8. Evaluated the model using:
+## Model Workflow
+1. Load the dataset
+2. Preprocess categorical columns using one-hot encoding
+3. Split data into training and testing sets
+4. Train a Linear Regression model
+5. Evaluate performance using:
    - MAE
    - MSE
    - R² Score
 
 ---
 
-## Model Performance
-
-Results from the current model:
+## Results
+Example model performance:
 
 - **MAE:** 970043.40
 - **MSE:** 1754318687330.66
-- **R² Score:** 0.6529
+- **R² Score:** 0.65
 
 ---
 
-## Project Structure
+## How to Run
+
+### 1) Download the project
+You can either:
+
+#### Option A — Download ZIP
+- Click the green **Code** button on GitHub
+- Click **Download ZIP**
+- Extract the ZIP file
+- Open the project folder
+
+#### Option B — Clone with Git
+```bash
+git clone https://github.com/Aryan7G/house-price-prediction.git
+cd house-price-prediction
+```
+
+---
+
+### 2) Install Python
+Make sure Python 3 is installed.
+
+Check with:
 
 ```bash
-house-price-prediction/
-├── data/
-│   └── Housing.csv
-├── notebooks/
-│   └── house_price_prediction.ipynb
-├── requirements.txt
-├── README.md
-└── .gitignore
+python --version
+```
+
+---
+
+### 3) Install required libraries
+Open terminal / command prompt inside the project folder and run:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4) Open the notebook
+Open this notebook in **Jupyter Notebook** or **Google Colab**:
+
+```bash
+notebooks/house_price_prediction.ipynb
+```
+
+---
+
+### 5) Make sure dataset path is correct
+The dataset should be inside:
+
+```bash
+data/Housing.csv
+```
+
+If you are running the notebook from the `notebooks` folder, use this path in your code:
+
+```python
+df = pd.read_csv("../data/Housing.csv")
+```
+
+---
+
+### 6) Run all notebook cells
+Run all cells from top to bottom.
+
+The notebook will:
+- load the dataset
+- preprocess the data
+- train the model
+- evaluate predictions
+
+---
+
+## Future Improvements
+- Try better models like Random Forest or XGBoost
+- Add feature scaling and feature engineering
+- Build a Streamlit web app for predictions
+- Improve model accuracy with hyperparameter tuning
+
+---
+
+## Author
+**Aryan**  
+Beginner in AI/ML, building projects and learning in public 🚀
